@@ -16,7 +16,6 @@ public class ExecutorServiceDemo {
                 IntStream.range(1,100_00)
                         .mapToObj(RunnableThread::new)
                         .collect(Collectors.toList())));
-        service.shutdown();
     }
 }
 

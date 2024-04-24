@@ -1,12 +1,12 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class LRUCache {
 
     private static final int CACHE_SIZE = 3;
     private static Map<String, Node> cache = new HashMap<>();
     private static DoublyLinkedList linkedList = new DoublyLinkedList();
+    private static ArrayDeque queue = new ArrayDeque();
+
 
     public static void main(String[] args) {
     }

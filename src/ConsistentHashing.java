@@ -6,7 +6,6 @@ public class ConsistentHashing {
 
     private SortedMap<Integer, String> circle = new TreeMap<>();
 
-
     public ConsistentHashing(int numberOfReplicas) {
         this.numberOfReplicas = numberOfReplicas;
     }
@@ -40,5 +39,13 @@ public class ConsistentHashing {
     private int getHash(String key) {
         // Simulate a simple hash function for demonstration purposes
         return key.hashCode();
+    }
+
+    public static void main(String[] args) {
+        ConsistentHashing has = new ConsistentHashing(4);
+        has.addServer("127.0.0.1");
+        has.addServer("127.0.0.2");
+        has.addServer("127.0.0.3");
+        has.addServer("127.0.0.4");
     }
 }

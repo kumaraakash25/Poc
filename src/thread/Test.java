@@ -1,5 +1,6 @@
 package thread;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -14,6 +15,9 @@ public class Test {
         });
 
         System.out.println(future.get());*/
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
+        System.out.println("Test");
 
         CompletableFuture<String> completableFuture
                 = CompletableFuture.supplyAsync(() -> "Hello");
